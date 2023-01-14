@@ -64,6 +64,53 @@ We have three way to rename.
 2. Useing space between old-coloumn-name and new-coloumn-name.``` empno.eid; ```
 3. Useing " " for new coloumn name.``` Sal "MONTHELY SALERY";```
 
+Q. WAQTD the name of the employeee along with their salery as monthely salery?
+```
+Select ename,sal"Monthely Slery" from emp;
+```
+Q. WAQTD names of the employee sal& annualsal for all the employees?
+```
+Select ename,sal,sal*12 as annualsal from emp;
+```
+# Selection
+The process of retriving the data by selecting both coloumn and rows is known as selection.
+In this we have order of execution divide in three pars.
+1. From Clause
+2. Where Clause
+3. Select Clause
+
+Syntacx-: Select */distinct col-name expresssion / aliasing from table-name;
+Note-:
+Where clause is used to filter the records it execute row by row process.
+
+Q. WAQTD all the details of employeee earning 3000?
+```
+Select * from emp where sal = 3000;
+```
+Q. WAQTD all the details who are working as MANAGER?
+```
+Select * from emp where job='MANAGER';
+```
+Q. WAQTD ename, job, sal, hiredate from employee who are working in deptno 30 ?
+```
+Select ename,job,sal,hiredate from emp where deptno = 30;
+```
+Q. WAQTD details of MARTIN ?
+```
+Select * from emp where ename = 'MARTIN';
+```
+Q. WAQTD details of the employeee whoe's reporting manager is 7756 ?
+```
+Select * from emp where mgr = 7756;
+```
+Q. WAQTD details of the employee   whoe's reporting manager is 7902 ? 
+```
+Select * from emp where empno = 7902;
+```
+Q. WAQTD all the details employee along with annualsal if annualsal is 9600 ?
+```
+Select emp.*, sal*12 annualsal where sal*12 = 9600;
+```
 
 # Data Control Language (DCL)
 It is  used to control access to data stored in a database between the user.
