@@ -1,4 +1,20 @@
 # SQL Class
+# Data Control Language (DCL)
+It is  used to control access to data stored in a database between the user.
+There is two part of DCL.
+. Grant
+. Revoke
+
+# Grant 
+1. It is a command or a staement which is used to given permission to the user.
+2. Grant SQL statement on table name to user.
+3. Syntax-: Grant select on emp to hr;
+
+# Revoke
+1. It is a command or a statement which is used to take back the given permission from the user.
+2. Revoke sql statement on table name from user.
+3. Syntax-: Revoke select on emp from hr;
+
 # Data Defination Language (DDL)
 1. It used to perform some Operation inside the Database.
 2. It has direct connection to Database , so the changes are parmanent.
@@ -141,3 +157,49 @@ It's used to delete the specific record or full table.
 delete from author where Profession='Struggler';
 delete from author;
 ```
+
+
+# Transection cotrol Language(TCL)
+1. It is used to save the traansection changes parmanentely, the transection can be insert, update, delete.
+2. There are applicable only for DMl statements.
+3. There are three stements are in TCL.
+  . Commit
+  . Rollback
+  . Savepoint
+## Commit
+It helps us to save the transection parmanentely into the database.
+Syntax-: Commit;
+## Rollback
+It is use to get the previous record upto save.
+Syntax-: Rollback;
+## Savepoint
+Savepoint is used to restoration point.
+Syntax-: Savepoint SavepointName;
+
+```
+insert into author values(1,'Uma','HouseWife',5000,null,20);
+commit;
+// if we commit then it save as parmanent
+// 1 row created
+insert into author values(2,'Uma','HouseWife',5000,null,20);
+savepoint M;
+// 2 row created
+insert into author values(3,'Uma','HouseWife',5000,null,20);
+insert into author values(4,'Uma','HouseWife',5000,null,20);
+savepoint N;
+//4 row created
+insert into author values(5,'Uma','HouseWife',5000,null,20);
+insert into author values(6,'Uma','HouseWife',5000,null,20);
+insert into author values(7,'Uma','HouseWife',5000,null,20);
+// 7 row created
+rollback to O;
+// 7 row created
+rollback to N;
+// 4 row created
+rollback to M;
+// 2 row created
+rollback;
+// empty the table
+// 1 row created
+```
+
