@@ -1,4 +1,70 @@
 # SQL Class
+# Data Query Language (DQL)
+It is used to read /retrive the data from database
+It has only select command
+We can retrive the data by useing.
+1. Projection
+2. Selection
+3. Join
+
+# Projection
+It is the process to retrive the data by selecting coloumn is known as projection.
+Syntax-: Select * /distinct coloumn-name expression / aliusing from table-name;
+It has the two part of the order of execution.
+1. From Clause
+2. Select Clause
+
+Note-:
+1. Table /view does not exit- if the table is not present inside database we get this.
+2. Invalid Identifier- if the coloumn name is wrong we get this.
+3. No rows selected- if we does not have any record inside the table or if the given condition is not matched with any rows.
+
+Q. WAQTD details of employee?
+```
+Select * from emp;
+Select emp .* from emp;
+```
+Q. WAQTD all the details of dept?
+```
+Select * from dept;
+```
+Q. WAQTD details of salgrade?
+```
+Select * from salgrade;
+```
+
+# Distinct
+It remove the duplicate.
+Two distinct keywords cannot be used in one selecte statement.
+Distinct can be applied to one or more coloumns.
+Q. WAQTD the unique saleries from employee table?
+```
+Select distinct (Sal) from emp:
+```
+Q. WAQTD the unique mgr with deptno;
+```
+Select distinct mgr, deptno from emp;
+```
+
+# Expression
+Combination of operands and operators.
+
+Q. WAQTD all the details of the employee along with annual salery?
+```
+Select emp.*, sal*12 from emp;
+```
+Q. WAQTD employee name with half of salery?
+```
+Select name, sal*6 from emp;
+```
+# Aliasing
+It is use to rename the table name and coloumn name.
+We have three way to rename.
+1. Useing as keyword between old-coloumn-name and new-coloumn-name.``` ename as empname; ```
+2. Useing space between old-coloumn-name and new-coloumn-name.``` empno.eid; ```
+3. Useing " " for new coloumn name.``` Sal "MONTHELY SALERY";```
+
+
 # Data Control Language (DCL)
 It is  used to control access to data stored in a database between the user.
 There is two part of DCL.
