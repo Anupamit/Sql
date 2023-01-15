@@ -111,6 +111,30 @@ Q. WAQTD all the details employee along with annualsal if annualsal is 9600 ?
 ```
 Select emp.*, sal*12 annualsal where sal*12 = 9600;
 ```
+# Operator
+It is used to perform operation between operands and produce the result.
+There are four type of operator.
+1. Arithmatic Operator (+,-,/,*,%)
+2. Relation or Compression operator (<,>,=,!=,=>,<=)
+3. Logical Operator (AND,OR,NOT)
+4. Special Operator (IS,IS NOT,IS NOT IN,LIKE,NOT LIKE,BETWEEN,NO BETWEEN)
+
+## Arithmatic Operator
+It is used to perform arithmatic operation on numberic values.
+
+Q. WAQTD details of employee with 10% of like in there salery?
+```
+Select emp.*, sal*10 as like from emp;
+```
+Q. WAQTD details of employee along with deduction or 500 from the salery for all the employee?
+```
+Select emp.*, sal-500 as deduction from emp:
+```
+Q. WAQTD details of employee along with like 30% for their annual sal for all the employees?
+```
+Select emp.*,(sal*12)+(sal*30/100) from emp;
+```
+
 
 # Data Control Language (DCL)
 It is  used to control access to data stored in a database between the user.
