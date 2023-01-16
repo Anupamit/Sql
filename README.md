@@ -134,7 +134,19 @@ Q. WAQTD details of employee along with like 30% for their annual sal for all th
 ```
 Select emp.*,(sal*12)+(sal*30/100) from emp;
 ```
+# Logical Operator
+It can be as  form of And, Or, Not.
 
+Q. WAQTD all the datails of emp who are earning greater then 1000 & job=Cleark?
+```
+Select * from emp where sal>1000 and job ='CLEARK';
+```
+Q. WAQTD all details of the emp wher job = Manager  & in deptno = 10;
+```
+Select * from emp where job = 'MANAGER' and deptno=10;
+
+```
+Q. WAQTD ename ,sal job, deptno,of employee if they earn less then 2000 and theier re
 
 # Data Control Language (DCL)
 It is  used to control access to data stored in a database between the user.
@@ -144,13 +156,13 @@ There is two part of DCL.
 
 # Grant 
 1. It is a command or a staement which is used to given permission to the user.
-2. Grant SQL statement on table name to user.
-3. Syntax-: Grant select on emp to hr;
+2. Syntax-: Grant Sql-statement on table name to user.
+3. e.x-: Grant select on emp to hr;
 
 # Revoke
 1. It is a command or a statement which is used to take back the given permission from the user.
-2. Revoke sql statement on table name from user.
-3. Syntax-: Revoke select on emp from hr;
+2. Syntax-: Revoke sql-statement on table name from user.
+3. e.x-: Revoke select on emp from hr;
 
 # Data Defination Language (DDL)
 1. It used to perform some Operation inside the Database.
